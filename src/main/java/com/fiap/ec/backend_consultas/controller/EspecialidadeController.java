@@ -19,4 +19,8 @@ public class EspecialidadeController {
     public List<Especialidade> listar() {
         return service.listar();
     }
+    @GetMapping("/{id}")
+    public Especialidade buscarPorId(@PathVariable Long id) {
+        return service.buscarPorId(id);
+    }
 }
